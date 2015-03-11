@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.views.adapters;
+package nl.delascuevas.imagesearch.ui.views.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import nl.delascuevas.imagesearch.MainActivity;
+import nl.delascuevas.imagesearch.ui.MainActivity;
 import nl.delascuevas.imagesearch.R;
 
 /**

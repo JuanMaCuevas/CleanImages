@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.network;
+package nl.delascuevas.imagesearch.infrastructure;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 import nl.delascuevas.imagesearch.BuildConfig;
-import nl.delascuevas.imagesearch.models.Response;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;

@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.views.widgets;
+package nl.delascuevas.imagesearch.ui.views.widgets;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch;
+package nl.delascuevas.imagesearch.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,11 +17,13 @@ import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
-import nl.delascuevas.imagesearch.fragments.HistoryFragment;
-import nl.delascuevas.imagesearch.fragments.SearchFragment;
+import nl.delascuevas.imagesearch.MyApp;
+import nl.delascuevas.imagesearch.R;
+import nl.delascuevas.imagesearch.ui.fragments.HistoryFragment;
+import nl.delascuevas.imagesearch.ui.fragments.SearchFragment;
 import nl.delascuevas.imagesearch.utils.OnFragmentInteractionListener;
 import nl.delascuevas.imagesearch.utils.SearchObserver;
-import nl.delascuevas.imagesearch.views.widgets.DepthPageTransformer;
+import nl.delascuevas.imagesearch.ui.views.widgets.DepthPageTransformer;
 
 
 public class MainActivity extends FragmentActivity implements

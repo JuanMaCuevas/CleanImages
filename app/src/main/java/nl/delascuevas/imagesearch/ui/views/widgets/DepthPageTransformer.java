@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.views.widgets;
+package nl.delascuevas.imagesearch.ui.views.widgets;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;

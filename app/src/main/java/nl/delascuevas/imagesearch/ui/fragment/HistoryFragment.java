@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.ui.fragments;
+package nl.delascuevas.imagesearch.ui.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,9 +18,9 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import nl.delascuevas.imagesearch.ui.MainActivity;
 import nl.delascuevas.imagesearch.R;
-import nl.delascuevas.imagesearch.utils.OnFragmentInteractionListener;
-import nl.delascuevas.imagesearch.utils.SearchObserver;
-import nl.delascuevas.imagesearch.ui.views.adapters.HistoryListAdapter;
+import nl.delascuevas.imagesearch.util.OnFragmentInteractionListener;
+import nl.delascuevas.imagesearch.util.SearchObserver;
+import nl.delascuevas.imagesearch.ui.view.adapters.HistoryListAdapter;
 
 public class HistoryFragment extends Fragment implements SearchObserver {
 

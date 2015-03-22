@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.ui.fragments;
+package nl.delascuevas.imagesearch.ui.fragment;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,11 +16,11 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import nl.delascuevas.imagesearch.MyApp;
 import nl.delascuevas.imagesearch.R;
-import nl.delascuevas.imagesearch.infrastructure.Response;
-import nl.delascuevas.imagesearch.utils.OnFragmentInteractionListener;
-import nl.delascuevas.imagesearch.utils.SearchObserver;
-import nl.delascuevas.imagesearch.ui.views.adapters.GridViewAdapter;
-import nl.delascuevas.imagesearch.ui.views.widgets.EndlessScrollListener;
+import nl.delascuevas.imagesearch.datasource.Response;
+import nl.delascuevas.imagesearch.util.OnFragmentInteractionListener;
+import nl.delascuevas.imagesearch.util.SearchObserver;
+import nl.delascuevas.imagesearch.ui.view.adapters.GridViewAdapter;
+import nl.delascuevas.imagesearch.ui.view.widgets.EndlessScrollListener;
 
 
 public class SearchFragment extends Fragment implements SearchObserver {

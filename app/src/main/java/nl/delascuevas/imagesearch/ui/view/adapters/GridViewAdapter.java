@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.ui.views.adapters;
+package nl.delascuevas.imagesearch.ui.view.adapters;
 
 import android.content.Context;
 import android.view.View;
@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nl.delascuevas.imagesearch.R;
-import nl.delascuevas.imagesearch.infrastructure.Response;
-import nl.delascuevas.imagesearch.infrastructure.SearchService;
-import nl.delascuevas.imagesearch.ui.views.widgets.SquaredImageView;
+import nl.delascuevas.imagesearch.datasource.Response;
+import nl.delascuevas.imagesearch.datasource.SearchService;
+import nl.delascuevas.imagesearch.ui.view.widgets.SquaredImageView;
 
 import static android.widget.ImageView.ScaleType.CENTER_CROP;
 

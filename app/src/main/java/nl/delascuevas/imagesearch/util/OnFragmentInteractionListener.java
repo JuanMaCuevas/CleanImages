@@ -1,6 +1,4 @@
-package nl.delascuevas.imagesearch.utils;
-
-import android.net.Uri;
+package nl.delascuevas.imagesearch.util;
 
 /**
  * Created by juanma on 15/02/15.

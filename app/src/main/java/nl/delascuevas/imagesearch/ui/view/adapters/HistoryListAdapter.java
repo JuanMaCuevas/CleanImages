@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.ui.views.adapters;
+package nl.delascuevas.imagesearch.ui.view.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

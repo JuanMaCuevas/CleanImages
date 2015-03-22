@@ -2,7 +2,7 @@ package nl.delascuevas.imagesearch;
 
 import android.app.Application;
 
-import nl.delascuevas.imagesearch.infrastructure.SearchService;
+import nl.delascuevas.imagesearch.datasource.SearchService;
 
 /**
  * Created by juanma on 15/02/15.

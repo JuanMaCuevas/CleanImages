@@ -1,4 +1,4 @@
-package nl.delascuevas.imagesearch.infrastructure;
+package nl.delascuevas.imagesearch.datasource;
 
 import java.util.List;
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +15,15 @@ import java.util.Set;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import nl.delascuevas.imagesearch.ui.MainActivity;
+import nl.delascuevas.imagesearch.BaseFragment;
 import nl.delascuevas.imagesearch.R;
+import nl.delascuevas.imagesearch.ui.MainActivity;
+import nl.delascuevas.imagesearch.ui.view.adapters.HistoryListAdapter;
 import nl.delascuevas.imagesearch.util.OnFragmentInteractionListener;
 import nl.delascuevas.imagesearch.util.SearchObserver;
-import nl.delascuevas.imagesearch.ui.view.adapters.HistoryListAdapter;
 
-public class HistoryFragment extends Fragment implements SearchObserver {
+
+public class HistoryFragment extends BaseFragment implements SearchObserver {
 
     private static final String PREFS_HISTORY = "history";
     @InjectView(R.id.history_listvew)

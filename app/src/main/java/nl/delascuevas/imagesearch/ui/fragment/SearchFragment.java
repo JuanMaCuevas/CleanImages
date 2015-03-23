@@ -12,11 +12,14 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import nl.delascuevas.imagesearch.MyApp;
 import nl.delascuevas.imagesearch.R;
 import nl.delascuevas.imagesearch.datasource.Response;
+import nl.delascuevas.imagesearch.datasource.SearchService;
 import nl.delascuevas.imagesearch.util.OnFragmentInteractionListener;
 import nl.delascuevas.imagesearch.util.SearchObserver;
 import nl.delascuevas.imagesearch.ui.view.adapters.GridViewAdapter;
@@ -25,8 +28,11 @@ import nl.delascuevas.imagesearch.ui.view.widgets.EndlessScrollListener;
 
 public class SearchFragment extends Fragment implements SearchObserver {
 
+    @Inject
+    SearchService service;
     @InjectView(R.id.background_icon)
     ImageView background;
+
     private OnFragmentInteractionListener mListener;
     private GridViewAdapter mAdapter;
 
@@ -63,7 +69,7 @@ public class SearchFragment extends Fragment implements SearchObserver {
             }
         });
 
-        MyApp.getInstance().getmService().subscribe(mAdapter);
+        service.subscribe(mAdapter);
 
         return rootView;
     }
@@ -90,13 +96,13 @@ public class SearchFragment extends Fragment implements SearchObserver {
     public void onDetach() {
         super.onDetach();
         mListener = null;
-        MyApp.getInstance().getmService().unsubscribe(mAdapter);
+        service.unsubscribe(mAdapter);
     }
 
 
     // Append more data into the adapter
     public void requestMoreImages(int offset) {
-        MyApp.getInstance().getmService().loadEnd(offset);
+        service.loadEnd(offset);
     }
 
     @Override

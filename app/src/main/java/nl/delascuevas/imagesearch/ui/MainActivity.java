@@ -2,8 +2,6 @@ package nl.delascuevas.imagesearch.ui;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -11,23 +9,29 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import nl.delascuevas.imagesearch.BaseActivity;
 import nl.delascuevas.imagesearch.MyApp;
 import nl.delascuevas.imagesearch.R;
+import nl.delascuevas.imagesearch.datasource.SearchService;
 import nl.delascuevas.imagesearch.ui.view.TwoViewPager;
 import nl.delascuevas.imagesearch.util.OnFragmentInteractionListener;
-import nl.delascuevas.imagesearch.util.SearchObserver;
 
 
-public class MainActivity extends FragmentActivity implements
+public class MainActivity extends BaseActivity implements
         OnFragmentInteractionListener {
 
     @InjectView(R.id.pager)
     TwoViewPager mPager;
     @InjectView(R.id.edit_search)
     EditText mEditSearch;
+
+    @Inject
+    SearchService service;
 
 
     public void onCreate(Bundle savedInstanceState) {
@@ -48,7 +52,7 @@ public class MainActivity extends FragmentActivity implements
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 String s = v.getText().toString();
-                MyApp.getInstance().getmService().search(s);
+                service.search(s);
                 hideKeyboard();
                 mPager.setCurrentItem(0, true);
                 return true;
@@ -86,7 +90,7 @@ public class MainActivity extends FragmentActivity implements
 
     public void searchQuery(String query) {
         mEditSearch.setText(query);
-        MyApp.getInstance().getmService().search(query);
+        service.search(query);
         hideKeyboard();
         mPager.setCurrentItem(0, true);
 
